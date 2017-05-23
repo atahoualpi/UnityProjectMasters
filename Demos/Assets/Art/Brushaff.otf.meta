@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e35ccae024ff3184aa81528c0a4f91ad
+timeCreated: 1493978431
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Brushaff
+  fontNames:
+  - Brushaff
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
