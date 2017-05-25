@@ -428,7 +428,7 @@ MonoBehaviour:
   freq9: 0.5
   impactForce: 0
   object_roughness: 1
-  qfactor: 600
+  qfactor: 3000
   size: 1
   time_roll: 0
   time_scratch: 0

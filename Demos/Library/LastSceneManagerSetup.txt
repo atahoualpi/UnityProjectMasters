@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ImpactOnlySimulatorScene.unity
+- path: Assets/Scenes/ScratchingFilterBasedScene.unity
   isLoaded: 1
   isActive: 1

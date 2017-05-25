@@ -554,7 +554,7 @@ MonoBehaviour:
   impact_force2: 0
   impact_force3: 0
   object_roughness: 1
-  qfactor: 600
+  qfactor: 1500
   size: 1
   time_roll: 0
   time_scratch: 0
