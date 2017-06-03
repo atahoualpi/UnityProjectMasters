@@ -48,6 +48,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
         //SetDataScript.SetGlassTop();
         //SetDataScript.SetTheFreqs();
         //SetDataScript.SetTheAmpls();
+
     }
 
     // Use this for initialization
@@ -61,6 +62,8 @@ public class AudioManager_Sinusoidal : MonoBehaviour
         //    rb.mass *= 10;
 
         ScaleEverythingWithObject();
+
+        //SetDataScript.IdentifyObject(this.transform, 0);
     }
 
     //void FixedUpdate()
@@ -74,6 +77,9 @@ public class AudioManager_Sinusoidal : MonoBehaviour
     {
         // determine which point of the object was struct and set the corresponding data
         SetDataScript.IdentifyObject(this.transform, collision.contacts[0].thisCollider.gameObject.transform.GetSiblingIndex());
+        //SetDataScript.IdentifyObject(this.transform, 0);
+
+        //SetDataScript.SetGlassTop();
 
         //IMPORTANT!!
         //find out whether the object colliding is a surface or other modal object. 
@@ -191,20 +197,30 @@ public class AudioManager_Sinusoidal : MonoBehaviour
         if (avgScale > 8.5f)
             avgScale = 8.5f;
 
+        // Scale-up
         if (avgScale > 1f)
         {
+            // Normalization
             avgScale /= 10f;
+            // Add to the pitch multiplier
             float temp = SetDataScript.multiplier +avgScale;
+            // Apply to the size slider
             HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Size, 2-temp);
+            // Apply to the pitch multiplier
             SetDataScript.multiplier = 2-temp;
+            // Re-set the modal frequencies
             SetDataScript.SetTheFreqs();
         }
+        // Scale-down
         else
         {
-            //avgScale /= 10f;
+            // Subtract from the pitch multiplier
             float temp = SetDataScript.multiplier - avgScale;
+            // Apply to the size slider
             HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Size, 1 + temp);
+            // Apply to the pitch multiplier
             SetDataScript.multiplier = 1+ temp;
+            // Re-set the modal frequencies
             SetDataScript.SetTheFreqs();
         }
 

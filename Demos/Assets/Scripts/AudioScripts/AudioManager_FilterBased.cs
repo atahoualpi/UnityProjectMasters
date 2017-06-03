@@ -58,6 +58,8 @@ public class AudioManager_FilterBased : MonoBehaviour
         //    rb.mass *= 10;
 
         ScaleEverythingWithObject();
+
+        SetDataScript.IdentifyObject(this.transform, 0);
     }
 
     //void FixedUpdate()
@@ -79,14 +81,13 @@ public class AudioManager_FilterBased : MonoBehaviour
 
         //SurfaceScript surfaceScript = collision.gameObject.GetComponent<SurfaceScript>(); // getting script attached on surface
         Hv_FilterRolling_AudioLib otherObjectScript = collision.gameObject.GetComponent<Hv_FilterRolling_AudioLib>(); //getting audio patch script from colliding object
-
         collisionMagnitude = 0.5f * massObject * collision.relativeVelocity.magnitude * collision.relativeVelocity.magnitude; // Kinetic energy
-
 
         if (otherObjectScript != null)
         {
             //Debug.Log(collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2));
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Impactforce, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2));
+
             HeavyScript.SendEvent(Hv_FilterRolling_AudioLib.Event.Whackimpact);
         }
         else
@@ -95,7 +96,6 @@ public class AudioManager_FilterBased : MonoBehaviour
 
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Impactforce, collisionMagnitude);
             HeavyScript.SendEvent(Hv_FilterRolling_AudioLib.Event.Whackimpact);
-
         }
 
         //Debug.Log(collisionMagnitude);
@@ -154,20 +154,30 @@ public class AudioManager_FilterBased : MonoBehaviour
         if (avgScale > 8.5f)
             avgScale = 8.5f;
 
+        // Scale-up
         if (avgScale > 1f)
         {
+            // Normalization
             avgScale /= 10f;
+            // Add to the pitch multiplier
             float temp = SetDataScript.multiplier +avgScale;
+            // Apply to the size slider
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Size, 2-temp);
+            // Apply to the pitch multiplier
             SetDataScript.multiplier = 2-temp;
+            // Re-set the modal frequencies
             SetDataScript.SetTheFreqs();
         }
+        // Scale-down
         else
         {
-            //avgScale /= 10f;
+            // Subtract from the pitch multiplier
             float temp = SetDataScript.multiplier - avgScale;
+            // Apply to the size slider
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Size, 1 + temp);
+            // Apply to the pitch multiplier
             SetDataScript.multiplier = 1+ temp;
+            // Re-set the modal frequencies
             SetDataScript.SetTheFreqs();
         }
 

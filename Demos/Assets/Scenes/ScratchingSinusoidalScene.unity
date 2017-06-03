@@ -480,7 +480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Filter-based modal synthesis
+  m_Text: Sinusoidal modal synthesis
 --- !u!222 &1407332095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -518,17 +518,17 @@ MonoBehaviour:
   - {fileID: 2047530456}
   spawnTime: 1.5
   Objects3D:
-  - {fileID: 1310529976119904, guid: 352944f53b1d5034599ce24ce1dc7c51, type: 2}
-  - {fileID: 1523685750638536, guid: 708531273e13d9f48a743e14b4a383c1, type: 2}
-  - {fileID: 1701174825544042, guid: c697b72b7b3d849409dc243fd9817416, type: 2}
-  - {fileID: 1630130462211708, guid: c5e67ef02a3b6b840807db8fc8a81149, type: 2}
-  - {fileID: 1979022296302304, guid: 07cbfb9ce24882f419daf1c6b958aaa9, type: 2}
-  - {fileID: 1535519238536914, guid: 72149de6967ad704f917c586117d3819, type: 2}
-  - {fileID: 1505207079985998, guid: 88b9601781e8f9e44bd9166d2b6b2005, type: 2}
-  - {fileID: 1929629616160766, guid: f74538f8e73bf5f429fbebc4515a317d, type: 2}
-  - {fileID: 1772368731452568, guid: 971d8e8374893a441b8754ad4eefc383, type: 2}
-  - {fileID: 1542691696134338, guid: 2d7cb2072ff53f34caa777902a4e015e, type: 2}
-  - {fileID: 1188830215969340, guid: cf9f4a1616dbffb43bd433bbe710d533, type: 2}
+  - {fileID: 1806958481165698, guid: f3756aa0e42fc774ea531a0fc04033dc, type: 2}
+  - {fileID: 1523685750638536, guid: cc938756b1a5f074ababd929bf0a21d4, type: 2}
+  - {fileID: 1701174825544042, guid: 986717097046cf5408986c6954663094, type: 2}
+  - {fileID: 1630130462211708, guid: 8121cd8226c7d984a97cc2c14c87782e, type: 2}
+  - {fileID: 1979022296302304, guid: 93980b2e9c5c6a74d8ede70e016d8f39, type: 2}
+  - {fileID: 1849350292350700, guid: 3fcdcdbaed42c004296a25208649f50a, type: 2}
+  - {fileID: 1505207079985998, guid: 839d24c746af0ef47883ed11480a0552, type: 2}
+  - {fileID: 1929629616160766, guid: d00f4eb8004a2ac4497801ae528b03f5, type: 2}
+  - {fileID: 1772368731452568, guid: 2aebfd8324aa1d649a6d5669601e1afc, type: 2}
+  - {fileID: 1542691696134338, guid: 095ddb9a799026741b3dd064bf5e3d8e, type: 2}
+  - {fileID: 1188830215969340, guid: 07680801ba1627b4a9033704735e6707, type: 2}
 --- !u!4 &1720489087
 Transform:
   m_ObjectHideFlags: 0

@@ -91,6 +91,8 @@
     <Compile Include="Assets\Scripts\AudioScripts\AudioManager_Sinusoidal.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\ModalDataScript_FilterBased.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\ModalDataScript_Sinusoidal.cs" />
+    <Compile Include="Assets\Scripts\AudioScripts\script.cs" />
+    <Compile Include="Assets\Scripts\AudioScripts\script1.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\ChangeMaterialFilterBased.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\ChangeMaterialSinusoidal.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\DestroyItems.cs" />

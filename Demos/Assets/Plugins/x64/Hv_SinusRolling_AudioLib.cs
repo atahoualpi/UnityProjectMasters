@@ -43,7 +43,7 @@ using UnityEditor;
 [CustomEditor(typeof(Hv_SinusRolling_AudioLib))]
 public class Hv_SinusRolling_Editor : Editor {
 
-  //[MenuItem("Heavy/SinusRolling")]
+  [MenuItem("Heavy/SinusRolling")]
   static void CreateHv_SinusRolling() {
     GameObject target = Selection.activeGameObject;
     if (target != null) {

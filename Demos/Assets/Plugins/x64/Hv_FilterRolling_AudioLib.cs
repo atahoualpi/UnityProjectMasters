@@ -43,7 +43,7 @@ using UnityEditor;
 [CustomEditor(typeof(Hv_FilterRolling_AudioLib))]
 public class Hv_FilterRolling_Editor : Editor {
 
-  //[MenuItem("Heavy/FilterRolling")]
+  [MenuItem("Heavy/FilterRolling")]
   static void CreateHv_FilterRolling() {
     GameObject target = Selection.activeGameObject;
     if (target != null) {
@@ -320,7 +320,7 @@ public class Hv_FilterRolling_Editor : Editor {
     // velocity
     GUILayout.BeginHorizontal();
     float velocity = _dsp.GetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Velocity);
-    float newVelocity = EditorGUILayout.Slider("velocity", velocity, 0.0f, 2.0f);
+    float newVelocity = EditorGUILayout.Slider("velocity", velocity, 0.0f, 10.0f);
     if (velocity != newVelocity) {
       _dsp.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Velocity, newVelocity);
     }
@@ -621,7 +621,7 @@ public class Hv_FilterRolling_AudioLib : MonoBehaviour {
         break;
       }
       case Parameter.Velocity: {
-        x = Mathf.Clamp(x, 0.0f, 2.0f);
+        x = Mathf.Clamp(x, 0.0f, 10.0f);
         velocity = x;
         break;
       }

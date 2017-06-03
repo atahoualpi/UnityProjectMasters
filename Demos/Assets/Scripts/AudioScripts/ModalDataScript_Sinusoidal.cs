@@ -415,12 +415,7 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region Plate
     public void SetPlateData(int hitPoint)
     {
-        //SetPlateMiddle(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetPlateOuter();
-        //SetPlateMiddle();
-        //SetPlateCenter();
+        
 
         switch (hitPoint)
         {
@@ -434,16 +429,24 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetPlateCenter();
                 break;
         }
+
+        //SetPlateMiddle(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetPlateOuter();
+        //SetPlateMiddle();
+        //SetPlateCenter();
+
         SetTheFreqs();
         SetTheAmpls();
     }
 
-    public void SetPlateOuter()
+    public void SetPlateMiddle()
     {
         freq_modes = new float[10] { 1714.581299f, 1668.823242f, 5049.536133f, 1757.647705f, 2869.299316f, 4390.081787f, 6745.275879f, 13953.515625f, 11743.670654f, 20806.457520f };
         ampl_modes = new float[10] { 1f, 0.001744f, 0.043746f, 0.001430f, 0.004816f, 0.031406f, 0.068062f, 0.007815f, 0.005319f, 0.006524f };
     }
-    void SetPlateMiddle()
+    void SetPlateOuter()
     {
         freq_modes = new float[10] { 1857.238770f, 4169.366455f, 2979.656982f, 1714.581299f, 4061.700439f, 5377.917480f, 2861.224365f, 4123.608398f, 4212.432861f, 5084.527588f };
         ampl_modes = new float[10] { 1f, 0.205835f, 0.079758f, 0.254087f, 0.086239f, 0.019413f, 0.032756f, 0.000763f, 0.001215f, 0.090116f };
@@ -553,15 +556,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region WineGlass
     public void SetGlassData(int hitPoint)
     {
-        //SetGlassBodyUpper(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetGlassTop();
-        //SetGlassBodyUpper();
-        //SetGlassBodyLower();
-        //SetGlassStem();
-        //SetGlassFoot();
-
         switch (hitPoint)
         {
             case 0:
@@ -580,6 +574,16 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetGlassFoot();
                 break;
         }
+
+        //SetGlassBodyUpper(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetGlassTop();
+        //SetGlassBodyUpper();
+        //SetGlassBodyLower();
+        //SetGlassStem();
+        //SetGlassFoot();
+
         SetTheFreqs();
         SetTheAmpls();
     }
