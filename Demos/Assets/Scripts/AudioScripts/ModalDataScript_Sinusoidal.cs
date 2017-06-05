@@ -92,14 +92,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region CookingPot
     public void SetPotData(int hitPoint)
     {
-        //SetPotBottomMiddle(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetPotTop();
-        //SetPotBody();
-        //SetPotBottomEdge();
-        //SetPotBottomMiddle();
-
         switch (hitPoint)
         {
             case 0:
@@ -117,6 +109,15 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
             case 4:
                 break;
         }
+
+        //SetPotBottomMiddle(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetPotTop();
+        //SetPotBody();
+        //SetPotBottomEdge();
+        //SetPotBottomMiddle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -146,15 +147,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region Cup
     public void SetCupData(int hitPoint)
     {
-        //SetCupTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetCupTop();
-        //SetCupBodyUpper();
-        //SetCupBodyLower();
-        //SetCupBottom();
-        //SetCupHandle();
-
         switch (hitPoint)
         {
             case 0:
@@ -173,6 +165,16 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetCupHandle();
                 break;
         }
+
+        //SetCupTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetCupTop();
+        //SetCupBodyUpper();
+        //SetCupBodyLower();
+        //SetCupBottom();
+        //SetCupHandle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -207,13 +209,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region CuttingBoard
     public void SetBoardData(int hitPoint)
     {
-        //SetBoardLongEdge(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBoardBody();
-        //SetBoardLongEdge();
-        //SetBoardShortEdge();
-
         switch (hitPoint)
         {
             case 0:
@@ -226,6 +221,14 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetBoardShortEdge();
                 break;
         }
+
+        //SetBoardLongEdge(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBoardBody();
+        //SetBoardLongEdge();
+        //SetBoardShortEdge();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -250,16 +253,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region Jug
     public void SetJugData(int hitPoint)
     {
-        //SetJugBodyMiddle(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetJugTop();
-        //SetJugBodyUpper();
-        //SetJugBodyMiddle();
-        //SetJugBodyLower();
-        //SetJugBottom();
-        //SetJugHandle();
-
         switch (hitPoint)
         {
             case 0:
@@ -281,6 +274,17 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetJugHandle();
                 break;
         }
+
+        //SetJugBodyMiddle(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetJugTop();
+        //SetJugBodyUpper();
+        //SetJugBodyMiddle();
+        //SetJugBodyLower();
+        //SetJugBottom();
+        //SetJugHandle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -320,14 +324,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region Mortar
     public void SetMortarData(int hitPoint)
     {
-        //SetMortarTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetMortarTop();
-        //SetMortarBodyUpper();
-        //SetMortarBodyLower();
-        //SetMortarBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -343,6 +339,15 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetMortarBottom();
                 break;
         }
+
+        //SetMortarTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetMortarTop();
+        //SetMortarBodyUpper();
+        //SetMortarBodyLower();
+        //SetMortarBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -372,13 +377,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region PlasticBowl
     public void SetBowlData(int hitPoint)
     {
-        //SetBowlTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBowlTop();
-        //SetBowlBody();
-        //SetBowlBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -391,6 +389,14 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetBowlBottom();
                 break;
         }
+
+        //SetBowlTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBowlTop();
+        //SetBowlBody();
+        //SetBowlBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -461,12 +467,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region RollingPin
     public void SetRollingData(int hitPoint)
     {
-        //SetRollingBody(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetRollingBody();
-        //SetRollingHandles();
-
         switch (hitPoint)
         {
             case 0:
@@ -476,6 +476,13 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetRollingHandles();
                 break;
         }
+
+        //SetRollingBody(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetRollingBody();
+        //SetRollingHandles();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -495,15 +502,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region WineBottle
     public void SetBottleData(int hitPoint)
     {
-        //SetBottleBodyLower(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBottleNeck();
-        //SetBottleBodyUpper();
-        //SetBottleBodyMiddle();
-        //SetBottleBodyLower();
-        //SetBottleBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -522,6 +520,16 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetBottleBottom();
                 break;
         }
+
+        //SetBottleBodyLower(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBottleNeck();
+        //SetBottleBodyUpper();
+        //SetBottleBodyMiddle();
+        //SetBottleBodyLower();
+        //SetBottleBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -579,7 +587,7 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
 
         // for the impact only iterate through all
         //SetGlassTop();
-        //SetGlassBodyUpper();
+        SetGlassBodyUpper();
         //SetGlassBodyLower();
         //SetGlassStem();
         //SetGlassFoot();
@@ -618,14 +626,6 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
     #region Wok
     public void SetWokData(int hitPoint)
     {
-        //SetWokBottomEdge(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetWokBodyUpper();
-        //SetWokBodyLower();
-        //SetWokBottomEdge();
-        //SetWokBottomMiddle();
-
         switch (hitPoint)
         {
             case 0:
@@ -641,6 +641,15 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
                 SetWokBottomMiddle();
                 break;
         }
+
+        //SetWokBottomEdge(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetWokBodyUpper();
+        //SetWokBodyLower();
+        //SetWokBottomEdge();
+        //SetWokBottomMiddle();
+
         SetTheFreqs();
         SetTheAmpls();
     }

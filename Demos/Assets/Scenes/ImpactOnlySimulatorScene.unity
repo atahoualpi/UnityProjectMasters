@@ -512,7 +512,7 @@ MonoBehaviour:
   freq9: 0
   impactForce: 0
   object_roughness: 15.6
-  qfactor: 4000
+  qfactor: 3500
   size: 1
   time_roll: 0
   time_scratch: 0
@@ -650,7 +650,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880495997}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f7fe4f86397344089e47b5c3065ff2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -857,7 +857,7 @@ MonoBehaviour:
   impact_force2: 0
   impact_force3: 0
   object_roughness: 1
-  qfactor: 3000
+  qfactor: 3500
   size: 1
   time_roll: 0
   time_scratch: 0
@@ -995,7 +995,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386951017}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f7fe4f86397344089e47b5c3065ff2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

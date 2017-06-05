@@ -92,14 +92,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region CookingPot
     public void SetPotData(int hitPoint)
     {
-        //SetPotBottomMiddle(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetPotTop();
-        //SetPotBody();
-        //SetPotBottomEdge();
-        //SetPotBottomMiddle();
-
         switch (hitPoint)
         {
             case 0:
@@ -117,6 +109,15 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
             case 4:
                 break;
         }
+
+        //SetPotBottomMiddle(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetPotTop();
+        //SetPotBody();
+        //SetPotBottomEdge();
+        //SetPotBottomMiddle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -146,15 +147,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region Cup
     public void SetCupData(int hitPoint)
     {
-        //SetCupTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetCupTop();
-        //SetCupBodyUpper();
-        //SetCupBodyLower();
-        //SetCupBottom();
-        //SetCupHandle();
-
         switch (hitPoint)
         {
             case 0:
@@ -173,6 +165,16 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetCupHandle();
                 break;
         }
+
+        //SetCupTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetCupTop();
+        //SetCupBodyUpper();
+        //SetCupBodyLower();
+        //SetCupBottom();
+        //SetCupHandle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -207,13 +209,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region CuttingBoard
     public void SetBoardData(int hitPoint)
     {
-        //SetBoardLongEdge(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBoardBody();
-        //SetBoardLongEdge();
-        //SetBoardShortEdge();
-
         switch (hitPoint)
         {
             case 0:
@@ -226,6 +221,14 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetBoardShortEdge();
                 break;
         }
+
+        //SetBoardLongEdge(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBoardBody();
+        //SetBoardLongEdge();
+        //SetBoardShortEdge();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -250,16 +253,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region Jug
     public void SetJugData(int hitPoint)
     {
-        //SetJugBodyMiddle(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetJugTop();
-        //SetJugBodyUpper();
-        //SetJugBodyMiddle();
-        //SetJugBodyLower();
-        //SetJugBottom();
-        //SetJugHandle();
-
         switch (hitPoint)
         {
             case 0:
@@ -281,6 +274,17 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetJugHandle();
                 break;
         }
+
+        //SetJugBodyMiddle(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetJugTop();
+        //SetJugBodyUpper();
+        //SetJugBodyMiddle();
+        //SetJugBodyLower();
+        //SetJugBottom();
+        //SetJugHandle();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -320,14 +324,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region Mortar
     public void SetMortarData(int hitPoint)
     {
-        //SetMortarTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetMortarTop();
-        //SetMortarBodyUpper();
-        //SetMortarBodyLower();
-        //SetMortarBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -343,6 +339,15 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetMortarBottom();
                 break;
         }
+
+        //SetMortarTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetMortarTop();
+        //SetMortarBodyUpper();
+        //SetMortarBodyLower();
+        //SetMortarBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -372,13 +377,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region PlasticBowl
     public void SetBowlData(int hitPoint)
     {
-        //SetBowlTop(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBowlTop();
-        //SetBowlBody();
-        //SetBowlBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -391,6 +389,14 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetBowlBottom();
                 break;
         }
+
+        //SetBowlTop(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBowlTop();
+        //SetBowlBody();
+        //SetBowlBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -415,18 +421,18 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region Plate
     public void SetPlateData(int hitPoint)
     {
-        //switch (hitPoint)
-        //{
-        //    case 0:
-        //        SetPlateOuter();
-        //        break;
-        //    case 1:
-        //        SetPlateMiddle();
-        //        break;
-        //    case 2:
-        //        SetPlateCenter();
-        //        break;
-        //}
+        switch (hitPoint)
+        {
+            case 0:
+                SetPlateOuter();
+                break;
+            case 1:
+                SetPlateMiddle();
+                break;
+            case 2:
+                SetPlateCenter();
+                break;
+        }
 
         //SetPlateMiddle(); //for single sound user test
 
@@ -434,8 +440,7 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
         //SetPlateOuter();
         //SetPlateMiddle();
         //SetPlateCenter();
-       
-        
+
         SetTheFreqs();
         SetTheAmpls();
 
@@ -499,15 +504,6 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     #region WineBottle
     public void SetBottleData(int hitPoint)
     {
-        //SetBottleBodyLower(); //for single sound user test
-
-        // for the impact only iterate through all
-        //SetBottleNeck();
-        //SetBottleBodyUpper();
-        //SetBottleBodyMiddle();
-        //SetBottleBodyLower();
-        //SetBottleBottom();
-
         switch (hitPoint)
         {
             case 0:
@@ -526,6 +522,16 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
                 SetBottleBottom();
                 break;
         }
+
+        //SetBottleBodyLower(); //for single sound user test
+
+        // for the impact only iterate through all
+        //SetBottleNeck();
+        //SetBottleBodyUpper();
+        //SetBottleBodyMiddle();
+        //SetBottleBodyLower();
+        //SetBottleBottom();
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -583,7 +589,7 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
 
         // for the impact only iterate through all
         //SetGlassTop();
-        //SetGlassBodyUpper();
+        SetGlassBodyUpper();
         //SetGlassBodyLower();
         //SetGlassStem();
         //SetGlassFoot();
