@@ -587,7 +587,7 @@ public class ModalDataScript_Sinusoidal : MonoBehaviour {
 
         // for the impact only iterate through all
         //SetGlassTop();
-        SetGlassBodyUpper();
+        //SetGlassBodyUpper();
         //SetGlassBodyLower();
         //SetGlassStem();
         //SetGlassFoot();

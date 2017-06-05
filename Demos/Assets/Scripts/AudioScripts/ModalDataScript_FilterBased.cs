@@ -589,7 +589,7 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
 
         // for the impact only iterate through all
         //SetGlassTop();
-        SetGlassBodyUpper();
+        //SetGlassBodyUpper();
         //SetGlassBodyLower();
         //SetGlassStem();
         //SetGlassFoot();

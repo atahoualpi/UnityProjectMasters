@@ -63,7 +63,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
 
         ScaleEverythingWithObject();
 
-        //SetDataScript.IdentifyObject(this.transform, 0);
+        SetDataScript.IdentifyObject(this.transform, 0);
     }
 
     //void FixedUpdate()
