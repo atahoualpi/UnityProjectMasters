@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/RainSinusoidalScene.unity
+- path: Assets/Scenes/MultipleObjectsScene.unity
   isLoaded: 1
   isActive: 1
