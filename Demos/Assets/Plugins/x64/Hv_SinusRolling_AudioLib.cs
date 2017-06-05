@@ -186,7 +186,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq1
     GUILayout.BeginHorizontal();
     float freq1 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq1);
-    float newFreq1 = EditorGUILayout.Slider("freq1", freq1, 0.0f, 20000.0f);
+    float newFreq1 = EditorGUILayout.Slider("freq1", freq1, 20.0f, 20000.0f);
     if (freq1 != newFreq1) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq1, newFreq1);
     }
@@ -195,7 +195,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq10
     GUILayout.BeginHorizontal();
     float freq10 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq10);
-    float newFreq10 = EditorGUILayout.Slider("freq10", freq10, 0.0f, 20000.0f);
+    float newFreq10 = EditorGUILayout.Slider("freq10", freq10, 20.0f, 20000.0f);
     if (freq10 != newFreq10) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq10, newFreq10);
     }
@@ -204,7 +204,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq2
     GUILayout.BeginHorizontal();
     float freq2 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq2);
-    float newFreq2 = EditorGUILayout.Slider("freq2", freq2, 0.0f, 20000.0f);
+    float newFreq2 = EditorGUILayout.Slider("freq2", freq2, 20.0f, 20000.0f);
     if (freq2 != newFreq2) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq2, newFreq2);
     }
@@ -213,7 +213,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq3
     GUILayout.BeginHorizontal();
     float freq3 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq3);
-    float newFreq3 = EditorGUILayout.Slider("freq3", freq3, 0.0f, 20000.0f);
+    float newFreq3 = EditorGUILayout.Slider("freq3", freq3, 20.0f, 20000.0f);
     if (freq3 != newFreq3) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq3, newFreq3);
     }
@@ -222,7 +222,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq4
     GUILayout.BeginHorizontal();
     float freq4 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq4);
-    float newFreq4 = EditorGUILayout.Slider("freq4", freq4, 0.0f, 20000.0f);
+    float newFreq4 = EditorGUILayout.Slider("freq4", freq4, 20.0f, 20000.0f);
     if (freq4 != newFreq4) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq4, newFreq4);
     }
@@ -231,7 +231,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq5
     GUILayout.BeginHorizontal();
     float freq5 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq5);
-    float newFreq5 = EditorGUILayout.Slider("freq5", freq5, 0.0f, 20000.0f);
+    float newFreq5 = EditorGUILayout.Slider("freq5", freq5, 20.0f, 20000.0f);
     if (freq5 != newFreq5) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq5, newFreq5);
     }
@@ -240,7 +240,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq6
     GUILayout.BeginHorizontal();
     float freq6 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq6);
-    float newFreq6 = EditorGUILayout.Slider("freq6", freq6, 0.0f, 20000.0f);
+    float newFreq6 = EditorGUILayout.Slider("freq6", freq6, 20.0f, 20000.0f);
     if (freq6 != newFreq6) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq6, newFreq6);
     }
@@ -249,7 +249,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq7
     GUILayout.BeginHorizontal();
     float freq7 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq7);
-    float newFreq7 = EditorGUILayout.Slider("freq7", freq7, 0.0f, 20000.0f);
+    float newFreq7 = EditorGUILayout.Slider("freq7", freq7, 20.0f, 20000.0f);
     if (freq7 != newFreq7) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq7, newFreq7);
     }
@@ -258,7 +258,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq8
     GUILayout.BeginHorizontal();
     float freq8 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq8);
-    float newFreq8 = EditorGUILayout.Slider("freq8", freq8, 0.0f, 20000.0f);
+    float newFreq8 = EditorGUILayout.Slider("freq8", freq8, 20.0f, 20000.0f);
     if (freq8 != newFreq8) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq8, newFreq8);
     }
@@ -267,7 +267,7 @@ public class Hv_SinusRolling_Editor : Editor {
     // freq9
     GUILayout.BeginHorizontal();
     float freq9 = _dsp.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq9);
-    float newFreq9 = EditorGUILayout.Slider("freq9", freq9, 0.0f, 20000.0f);
+    float newFreq9 = EditorGUILayout.Slider("freq9", freq9, 20.0f, 20000.0f);
     if (freq9 != newFreq9) {
       _dsp.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Freq9, newFreq9);
     }
@@ -452,16 +452,16 @@ public class Hv_SinusRolling_AudioLib : MonoBehaviour {
   public float amp7 = 0.5f;
   public float amp8 = 0.5f;
   public float amp9 = 0.5f;
-  public float freq1 = 0.5f;
-  public float freq10 = 0.5f;
-  public float freq2 = 0.5f;
-  public float freq3 = 0.5f;
-  public float freq4 = 0.5f;
-  public float freq5 = 0.5f;
-  public float freq6 = 0.5f;
-  public float freq7 = 0.5f;
-  public float freq8 = 0.5f;
-  public float freq9 = 0.5f;
+  public float freq1 = 20.0f;
+  public float freq10 = 20.0f;
+  public float freq2 = 20.0f;
+  public float freq3 = 20.0f;
+  public float freq4 = 20.0f;
+  public float freq5 = 20.0f;
+  public float freq6 = 20.0f;
+  public float freq7 = 20.0f;
+  public float freq8 = 20.0f;
+  public float freq9 = 20.0f;
   public float impact_force1 = 0.0f;
   public float impact_force2 = 0.0f;
   public float impact_force3 = 0.0f;
@@ -577,52 +577,52 @@ public class Hv_SinusRolling_AudioLib : MonoBehaviour {
         break;
       }
       case Parameter.Freq1: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq1 = x;
         break;
       }
       case Parameter.Freq10: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq10 = x;
         break;
       }
       case Parameter.Freq2: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq2 = x;
         break;
       }
       case Parameter.Freq3: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq3 = x;
         break;
       }
       case Parameter.Freq4: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq4 = x;
         break;
       }
       case Parameter.Freq5: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq5 = x;
         break;
       }
       case Parameter.Freq6: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq6 = x;
         break;
       }
       case Parameter.Freq7: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq7 = x;
         break;
       }
       case Parameter.Freq8: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq8 = x;
         break;
       }
       case Parameter.Freq9: {
-        x = Mathf.Clamp(x, 0.0f, 20000.0f);
+        x = Mathf.Clamp(x, 20.0f, 20000.0f);
         freq9 = x;
         break;
       }

@@ -77,9 +77,6 @@ public class AudioManager_Sinusoidal : MonoBehaviour
     {
         // determine which point of the object was struct and set the corresponding data
         SetDataScript.IdentifyObject(this.transform, collision.contacts[0].thisCollider.gameObject.transform.GetSiblingIndex());
-        //SetDataScript.IdentifyObject(this.transform, 0);
-
-        //SetDataScript.SetGlassTop();
 
         //IMPORTANT!!
         //find out whether the object colliding is a surface or other modal object. 
