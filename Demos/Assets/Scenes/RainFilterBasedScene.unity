@@ -504,7 +504,7 @@ MonoBehaviour:
   - {fileID: 465265122}
   spawnTime: 1.5
   Objects3D:
-  - {fileID: 1310529976119904, guid: 1d2a7c32f3d9ba243a8e28c3220e90bd, type: 2}
+  - {fileID: 1192658353995966, guid: 1d2a7c32f3d9ba243a8e28c3220e90bd, type: 2}
   - {fileID: 1523685750638536, guid: c97ec3e5e67ca7a419d5d7998a284d8a, type: 2}
   - {fileID: 1701174825544042, guid: 3781feb428f8ae54b9612f0bfbc4502a, type: 2}
   - {fileID: 1630130462211708, guid: 288a84819d64a9042bd5cd32206bff79, type: 2}

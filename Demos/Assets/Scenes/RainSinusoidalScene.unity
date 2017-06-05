@@ -578,7 +578,7 @@ MonoBehaviour:
   - {fileID: 1827846396}
   spawnTime: 1.5
   Objects3D:
-  - {fileID: 0}
+  - {fileID: 1939720904862970, guid: 3c78822fb63ad0b42b908c97763534f4, type: 2}
   - {fileID: 1523685750638536, guid: d79ab4f15d4095c4584290d5b3b45045, type: 2}
   - {fileID: 1701174825544042, guid: 1a965d9a718e4c241945fb8f43e844d8, type: 2}
   - {fileID: 1630130462211708, guid: 81e2a1e67bf50d545985e8d5aea9fc4d, type: 2}
@@ -595,8 +595,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796358859}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0, z: 5.61}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.69999987, y: 0, z: 5.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2136152740}
