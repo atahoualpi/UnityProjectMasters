@@ -190,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &525531390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,11 +424,11 @@ GameObject:
   - component: {fileID: 880495998}
   m_Layer: 0
   m_Name: ImpulseSimulatorFilterBased
-  m_TagString: wineglass
+  m_TagString: cup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &880495998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 880495997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d4560282e80614b9c9bf1a63539397, type: 3}
+  m_Script: {fileID: 11500000, guid: ba8c8ad15c74f024b835d48c830efb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amp1: 0.5
@@ -500,19 +500,19 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0
-  freq10: 0
-  freq2: 0
-  freq3: 0
-  freq4: 0
-  freq5: 0
-  freq6: 0
-  freq7: 0
-  freq8: 0
-  freq9: 0
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impactForce: 0
-  object_roughness: 15.6
-  qfactor: 3500
+  object_roughness: 1
+  qfactor: 3000
   size: 1
   time_roll: 0
   time_scratch: 0
@@ -650,7 +650,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880495997}
-  m_Material: {fileID: 13400000, guid: a6f7fe4f86397344089e47b5c3065ff2, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -778,11 +778,11 @@ GameObject:
   - component: {fileID: 1386951018}
   m_Layer: 0
   m_Name: ImpulseSimulatorSinusoidal
-  m_TagString: wineglass
+  m_TagString: cup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1386951018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386951017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8276468ccc0199f42a078f964243fa92, type: 3}
+  m_Script: {fileID: 11500000, guid: 67672e40b47e842409c2880426fb14ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amp1: 0.5
@@ -843,21 +843,21 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0
-  freq10: 0
-  freq2: 0
-  freq3: 0
-  freq4: 0
-  freq5: 0
-  freq6: 0
-  freq7: 0
-  freq8: 0
-  freq9: 0
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impact_force1: 0
   impact_force2: 0
   impact_force3: 0
   object_roughness: 1
-  qfactor: 3500
+  qfactor: 3000
   size: 1
   time_roll: 0
   time_scratch: 0
@@ -917,7 +917,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -941,7 +941,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!54 &1386951022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -995,7 +995,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386951017}
-  m_Material: {fileID: 13400000, guid: a6f7fe4f86397344089e47b5c3065ff2, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

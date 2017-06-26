@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ModalDataScript_Sinusoidal))]
-[RequireComponent(typeof(Hv_SinusRolling_AudioLib))]
+[RequireComponent(typeof(Hv_Sinusoidal_AudioLib))]
 [RequireComponent(typeof(Rigidbody))]
+[ExecuteInEditMode]
 public class AudioManager_Sinusoidal : MonoBehaviour
 {
     //[HideInInspector]
-    public Hv_SinusRolling_AudioLib HeavyScript;
+    public Hv_Sinusoidal_AudioLib HeavyScript;
     public ModalDataScript_Sinusoidal SetDataScript;
 
     [HideInInspector]
@@ -42,7 +43,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
 
     void Awake()
     {
-        HeavyScript = GetComponent<Hv_SinusRolling_AudioLib>();
+        HeavyScript = GetComponent<Hv_Sinusoidal_AudioLib>();
         SetDataScript = GetComponent<ModalDataScript_Sinusoidal>();
 
         //SetDataScript.SetGlassTop();
@@ -84,7 +85,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
         //Could use the 2 objects' Q factors, normalize them and use the resulting mean of both to find the collision magnitude
 
         //SurfaceScript surfaceScript = collision.gameObject.GetComponent<SurfaceScript>(); // getting script attached on surface
-        Hv_SinusRolling_AudioLib otherObjectScript = collision.gameObject.GetComponent<Hv_SinusRolling_AudioLib>(); //getting audio patch script from colliding object with sinusRolling script attached
+        Hv_Sinusoidal_AudioLib otherObjectScript = collision.gameObject.GetComponent<Hv_Sinusoidal_AudioLib>(); //getting audio patch script from colliding object with sinusRolling script attached
         collisionMagnitude = 0.5f * massObject * collision.relativeVelocity.magnitude * collision.relativeVelocity.magnitude;
         //collisionMagnitude = collision.impulse.magnitude;
         //Debug.Log("Impulse: " + collisionMagnitude);
@@ -96,40 +97,40 @@ public class AudioManager_Sinusoidal : MonoBehaviour
                 case 1:
                     if (otherObjectScript != null)
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force1, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force1, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
                     }
                     else
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force1, collisionMagnitude);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force1, collisionMagnitude);
                         //Debug.Log("Impulse: " + collisionMagnitude);
                     }
-                    HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack1);
+                    HeavyScript.SendEvent(Hv_Sinusoidal_AudioLib.Event.Whack1);
                     //Debug.Log("whack1");
                     caseSwitch = 2;
                     break;
                 case 2:
                     if (otherObjectScript != null)
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force2, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force2, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
                     }
                     else
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force2, collisionMagnitude);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force2, collisionMagnitude);
                     }
-                    HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack2);
+                    HeavyScript.SendEvent(Hv_Sinusoidal_AudioLib.Event.Whack2);
                     //Debug.Log("whack2");
                     caseSwitch = 3;
                     break;
                 case 3:
                     if (otherObjectScript != null)
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force3, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force3, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2) / 2);
                     }
                     else
                     {
-                        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force3, collisionMagnitude);
+                        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Impact_force3, collisionMagnitude);
                     }
-                    HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack3);
+                    HeavyScript.SendEvent(Hv_Sinusoidal_AudioLib.Event.Whack3);
                     //Debug.Log("whack3");
                     caseSwitch = 1;
                     break;
@@ -144,12 +145,12 @@ public class AudioManager_Sinusoidal : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Velocity, rb.velocity.magnitude); //send veloctiy parameter to patch, placed outside the following condition so that the rolling whoosh sound stops when object stops rolling
+        HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Velocity, rb.velocity.magnitude); //send veloctiy parameter to patch, placed outside the following condition so that the rolling whoosh sound stops when object stops rolling
 
         //Scratching
         if (rb.angularVelocity.magnitude < 1f)
         {
-            HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Time_scratch, Time.deltaTime * 4000);
+            HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Time_scratch, Time.deltaTime * 4000);
         }
         //Rolling
         else
@@ -174,8 +175,8 @@ public class AudioManager_Sinusoidal : MonoBehaviour
                 curTime = Time.time - starterTime;
                 starterTime = Time.time;
 
-                HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Time_roll, curTime * 3000); //sets how long the rolling noise sound will last. * 1000 to transform from seconds to milliseconds and then * 3 for heuristic purposes
-                HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Excite); // sending bang to patch        
+                HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Time_roll, curTime * 3000); //sets how long the rolling noise sound will last. * 1000 to transform from seconds to milliseconds and then * 3 for heuristic purposes
+                HeavyScript.SendEvent(Hv_Sinusoidal_AudioLib.Event.Excite); // sending bang to patch        
 
                 pulseIndex += 1;
             }
@@ -202,7 +203,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
             // Add to the pitch multiplier
             float temp = SetDataScript.multiplier +avgScale;
             // Apply to the size slider
-            HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Size, 2-temp);
+            HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Size, 2-temp);
             // Apply to the pitch multiplier
             SetDataScript.multiplier = 2-temp;
             // Re-set the modal frequencies
@@ -214,7 +215,7 @@ public class AudioManager_Sinusoidal : MonoBehaviour
             // Subtract from the pitch multiplier
             float temp = SetDataScript.multiplier - avgScale;
             // Apply to the size slider
-            HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Size, 1 + temp);
+            HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Size, 1 + temp);
             // Apply to the pitch multiplier
             SetDataScript.multiplier = 1+ temp;
             // Re-set the modal frequencies

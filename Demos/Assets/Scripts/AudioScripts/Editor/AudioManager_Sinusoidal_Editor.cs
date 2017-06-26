@@ -58,11 +58,11 @@ public class AudioManager_Sinusoidal_Editor : Editor
         GUILayout.Label("Metal", GUILayout.MaxWidth(40));
         GUILayout.EndHorizontal();
         GUILayout.BeginHorizontal();
-        float material = scriptTarget.HeavyScript.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Qfactor);
+        float material = scriptTarget.HeavyScript.GetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Qfactor);
         float newMaterial = EditorGUILayout.Slider("", material, 20f, 5000f);
         if (material != newMaterial)
         {
-            scriptTarget.HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Qfactor, newMaterial);
+            scriptTarget.HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Qfactor, newMaterial);
         }
         GUILayout.EndHorizontal();
         GUILayout.BeginHorizontal();
@@ -87,7 +87,7 @@ public class AudioManager_Sinusoidal_Editor : Editor
         float newSize = EditorGUILayout.Slider("", size, 0.1f, 1.9f);
         if (size != newSize)
         {
-            scriptTarget.HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Size, 2 - newSize);
+            scriptTarget.HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Size, 2 - newSize);
             scriptTarget.SetDataScript.multiplier = 2 - newSize;
             scriptTarget.SetDataScript.SetTheFreqs();
         }
@@ -104,11 +104,11 @@ public class AudioManager_Sinusoidal_Editor : Editor
         GUILayout.EndHorizontal();
         GUILayout.BeginHorizontal();
         GUILayout.Label("Low", GUILayout.Width(30));
-        float roughness = scriptTarget.HeavyScript.GetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Object_roughness);
+        float roughness = scriptTarget.HeavyScript.GetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Object_roughness);
         float newRoughness = EditorGUILayout.Slider("", roughness, 0f, 50f);
         if (roughness != newRoughness)
         {
-            scriptTarget.HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Object_roughness, newRoughness);
+            scriptTarget.HeavyScript.SetFloatParameter(Hv_Sinusoidal_AudioLib.Parameter.Object_roughness, newRoughness);
         }
         GUILayout.Label("High", GUILayout.Width(25));
         GUILayout.EndHorizontal();

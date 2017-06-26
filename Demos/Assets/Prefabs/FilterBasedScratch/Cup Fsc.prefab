@@ -500,7 +500,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
@@ -534,7 +534,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1523685750638536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d4560282e80614b9c9bf1a63539397, type: 3}
+  m_Script: {fileID: 11500000, guid: ba8c8ad15c74f024b835d48c830efb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amp1: 0.5
@@ -613,16 +613,16 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0.5
-  freq10: 0.5
-  freq2: 0.5
-  freq3: 0.5
-  freq4: 0.5
-  freq5: 0.5
-  freq6: 0.5
-  freq7: 0.5
-  freq8: 0.5
-  freq9: 0.5
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impactForce: 0
   object_roughness: 1
   qfactor: 3000
@@ -643,6 +643,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeavyScript: {fileID: 114334701863838702}
   freq_modes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  ampl_modes:
   - 0
   - 0
   - 0

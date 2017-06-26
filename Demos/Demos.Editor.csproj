@@ -135,6 +135,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioScripts\Editor\AudioManager_FilterBased_Editor.cs" />
     <Compile Include="Assets\Scripts\AudioScripts\Editor\AudioManager_Sinusoidal_Editor.cs" />
+    <Compile Include="Assets\Scripts\AudioScripts\Editor\CubeManager_Editor.cs" />
+    <Compile Include="Assets\Scripts\AudioScripts\Editor\CubeManager_FB_Editor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

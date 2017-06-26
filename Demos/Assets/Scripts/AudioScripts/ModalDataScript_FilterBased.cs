@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[ExecuteInEditMode]
 public class ModalDataScript_FilterBased : MonoBehaviour {
 
-    public Hv_FilterRolling_AudioLib HeavyScript;
+    public Hv_FilterBased_AudioLib HeavyScript;
    
     //public enum ObjectName { CookingPot, Cup, CuttingBoard, Jug, Mortar, PlasticBowl, Plate, RollingPin, WineBottle, WineGlass, Wok };
     //ObjectName myObj;
 
     [HideInInspector]
     public float[] freq_modes = new float[10];
+    [HideInInspector]
     public float[] ampl_modes = new float[10];
     float scaleAvg;
 
@@ -20,7 +21,7 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        HeavyScript = GetComponent<Hv_FilterRolling_AudioLib>();
+        HeavyScript = GetComponent<Hv_FilterBased_AudioLib>();
         scaleAvg = (transform.localScale.x + transform.localScale.y + transform.localScale.z) / 3f;
     }
 
@@ -28,6 +29,9 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
     {
         switch (currObj.tag)
         {
+            case "Untagged":
+                Debug.LogWarning("Please assign a tag.");
+                break;
             case "cookingpot":
                 //myObj = ObjectName.CookingPot;
                 AudioManager_FilterBased.objectPerimeter = 0.675f * scaleAvg;
@@ -118,6 +122,8 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
         //SetPotBottomEdge();
         //SetPotBottomMiddle();
 
+        freq_modes = new float[10] { 392.980957f, 629.846191f, 1806.097412f, 4153.216553f, 5229.876709f, 3561.053467f, 6712.976074f, 7073.657227f, 6497.644043f, 8109.942627f };
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -127,15 +133,25 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
         freq_modes = new float[10] {392.980957f, 629.846191f, 1806.097412f, 4153.216553f, 5229.876709f, 3561.053467f, 6712.976074f, 7073.657227f, 6497.644043f, 8109.942627f };
         ampl_modes = new float[10] {1f, 0.265471f, 0.171540f, 0.049775f, 0.014259f, 0.091790f, 0.052810f, 0.020024f, 0.008392f, 0.004513f };
     }
+    //void SetPotBody()
+    //{
+    //    freq_modes = new float[10] { 7644.287109f, 3849.060059f, 6341.528320f, 5776.281738f, 6812.567139f, 7326.672363f, 10225.579834f, 12392.358398f, 13732.800293f, 18567.004395f };
+    //    ampl_modes = new float[10] { 0.049050f, 1f, 0.516357f, 0.207674f, 0.269273f, 0.171419f, 0.018928f, 0.179292f, 0.018817f, 0.011524f };
+    //}
     void SetPotBody()
     {
-        freq_modes = new float[10] { 7644.287109f, 3849.060059f, 6341.528320f, 5776.281738f, 6812.567139f, 7326.672363f, 10225.579834f, 12392.358398f, 13732.800293f, 18567.004395f };
-        ampl_modes = new float[10] { 0.049050f, 1f, 0.516357f, 0.207674f, 0.269273f, 0.171419f, 0.018928f, 0.179292f, 0.018817f, 0.011524f };
+        freq_modes = new float[10] { 7644.287109f, 3849.060059f, 6341.528320f, 5776.281738f, 6812.567139f, 7326.672363f, 10225.579834f, 5412.908936f, 6180.029297f, 1800.714111f };
+        ampl_modes = new float[10] { 0.049050f, 1f, 0.516357f, 0.207674f, 0.269273f, 0.171419f, 0.018928f, 0.015012f, 1.000000f, 0.827989f };
     }
+    //void SetPotBottomEdge()
+    //{
+    //    freq_modes = new float[10] {2481.701660f, 9396.551514f, 7210.931396f, 10123.297119f, 7079.040527f, 10077.539063f, 15175.524902f, 13024.896240f, 15218.591309f, 18852.319336f };
+    //    ampl_modes = new float[10] { 1f, 0.490268f, 0.740528f, 0.347271f, 0.361927f, 0.098020f, 0.098260f, 0.112399f, 0.056398f, 0.075828f };
+    //}
     void SetPotBottomEdge()
     {
-        freq_modes = new float[10] {2481.701660f, 9396.551514f, 7210.931396f, 10123.297119f, 7079.040527f, 10077.539063f, 15175.524902f, 13024.896240f, 15218.591309f, 18852.319336f };
-        ampl_modes = new float[10] { 1f, 0.490268f, 0.740528f, 0.347271f, 0.361927f, 0.098020f, 0.098260f, 0.112399f, 0.056398f, 0.075828f };
+        freq_modes = new float[10] { 2481.701660f, 9396.551514f, 7210.931396f, 10123.297119f, 7079.040527f, 10077.539063f, 9205.444336f, 10222.888184f, 392.980957f, 9932.189941f };
+        ampl_modes = new float[10] { 1f, 0.490268f, 0.740528f, 0.347271f, 0.361927f, 0.098020f, 0.152608f, 0.094208f, 0.676567f, 0.265765f };
     }
     void SetPotBottomMiddle()
     {
@@ -654,6 +670,8 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
         //SetWokBottomEdge();
         //SetWokBottomMiddle();
 
+        freq_modes = new float[10] { 382.214355f, 4780.371094f, 3781.768799f, 4710.388184f, 4839.587402f, 4632.330322f, 5873.181152f, 7792.327881f, 6303.845215f, 6930.999756f };
+
         SetTheFreqs();
         SetTheAmpls();
     }
@@ -663,51 +681,61 @@ public class ModalDataScript_FilterBased : MonoBehaviour {
         freq_modes = new float[10] { 382.214355f, 4780.371094f, 3781.768799f, 4710.388184f, 4839.587402f, 4632.330322f, 5873.181152f, 7792.327881f, 6303.845215f, 6930.999756f};
         ampl_modes = new float[10] { 1f, 0.180463f, 0.015417f, 0.064216f, 0.060252f, 0.099987f, 0.119439f, 0.070670f, 0.082198f, 0.047312f };
     }
+    //void SetWokBodyLower()
+    //{
+    //    freq_modes = new float[10] { 3784.460449f, 3873.284912f, 4285.107422f, 4209.741211f, 4715.771484f, 4328.173828f, 3827.526855f, 6831.408691f, 6120.812988f, 11824.420166f };
+    //    ampl_modes = new float[10] {0.159950f, 0.095701f, 0.820909f, 0.613315f, 0.513055f, 0.398397f, 0.133717f, 1f, 0.583573f, 0.006760f };
+    //}
     void SetWokBodyLower()
     {
-        freq_modes = new float[10] { 3784.460449f, 3873.284912f, 4285.107422f, 4209.741211f, 4715.771484f, 4328.173828f, 3827.526855f, 6831.408691f, 6120.812988f, 11824.420166f };
-        ampl_modes = new float[10] {0.159950f, 0.095701f, 0.820909f, 0.613315f, 0.513055f, 0.398397f, 0.133717f, 1f, 0.583573f, 0.006760f };
+        freq_modes = new float[10] { 3784.460449f, 3873.284912f, 4285.107422f, 4209.741211f, 4715.771484f, 4328.173828f, 3827.526855f, 6831.408691f, 6120.812988f, 4042.858887f };
+        ampl_modes = new float[10] { 0.159950f, 0.095701f, 0.820909f, 0.613315f, 0.513055f, 0.398397f, 0.133717f, 1f, 0.583573f, 0.395831f };
     }
     void SetWokBottomEdge()
     {
         freq_modes = new float[10] { 382.214355f, 5310.626221f, 4721.154785f, 4793.829346f, 5717.065430f, 5464.050293f, 6031.988525f, 13931.982422f, 15595.422363f, 10599.719238f  };
         ampl_modes = new float[10] { 1f, 0.132219f, 0.097873f, 0.007614f, 0.074739f, 0.083273f, 0.078572f, 0.000107f, 0.001101f, 0.000261f };
     }
+    //void SetWokBottomMiddle()
+    //{
+    //    freq_modes = new float[10] {2172.161865f, 5703.607178f, 4594.647217f, 5011.853027f, 6852.941895f, 4083.233643f, 5746.673584f, 6080.438232f, 6034.680176f, 4285.107422f };
+    //    ampl_modes = new float[10] { 1f, 0.202221f, 0.178832f, 0.171953f, 0.285128f, 0.207493f, 0.021064f, 0.163468f, 0.184431f, 0.072853f };
+    //}
     void SetWokBottomMiddle()
     {
-        freq_modes = new float[10] {2172.161865f, 5703.607178f, 4594.647217f, 5011.853027f, 6852.941895f, 4083.233643f, 5746.673584f, 6080.438232f, 6034.680176f, 4285.107422f };
-        ampl_modes = new float[10] { 1f, 0.202221f, 0.178832f, 0.171953f, 0.285128f, 0.207493f, 0.021064f, 0.163468f, 0.184431f, 0.072853f };
+        freq_modes = new float[10] { 2172.161865f, 5703.607178f, 4594.647217f, 5011.853027f, 6852.941895f, 4083.233643f, 382.214355f, 6080.438232f, 6034.680176f, 4285.107422f };
+        ampl_modes = new float[10] { 1f, 0.202221f, 0.178832f, 0.171953f, 0.285128f, 0.207493f, 0.279922f, 0.163468f, 0.184431f, 0.072853f };
     }
     #endregion Wok
 
     // sets frequency values to the Heavy script
     public void SetTheFreqs()
     {
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq1, freq_modes[0] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq2, freq_modes[1] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq3, freq_modes[2] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq4, freq_modes[3] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq5, freq_modes[4] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq6, freq_modes[5] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq7, freq_modes[6] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq8, freq_modes[7] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq9, freq_modes[8] * multiplier);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Freq10, freq_modes[9] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq1, freq_modes[0] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq2, freq_modes[1] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq3, freq_modes[2] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq4, freq_modes[3] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq5, freq_modes[4] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq6, freq_modes[5] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq7, freq_modes[6] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq8, freq_modes[7] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq9, freq_modes[8] * multiplier);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Freq10, freq_modes[9] * multiplier);
     }
 
     // sets amplitude values to the Heavy script
     public void SetTheAmpls()
     {
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp1, ampl_modes[0]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp2, ampl_modes[1]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp3, ampl_modes[2]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp4, ampl_modes[3]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp5, ampl_modes[4]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp6, ampl_modes[5]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp7, ampl_modes[6]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp8, ampl_modes[7]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp9, ampl_modes[8]);
-        HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Amp10, ampl_modes[9]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp1, ampl_modes[0]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp2, ampl_modes[1]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp3, ampl_modes[2]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp4, ampl_modes[3]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp5, ampl_modes[4]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp6, ampl_modes[5]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp7, ampl_modes[6]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp8, ampl_modes[7]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp9, ampl_modes[8]);
+        HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Amp10, ampl_modes[9]);
      
     }
 }
