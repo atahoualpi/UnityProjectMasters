@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\AudioScripts\ModalDataScript_Sinusoidal.cs" />
     <Compile Include="Assets\Scripts\Cube\cubeScript.cs" />
     <Compile Include="Assets\Scripts\Cube\cubeScript_FB.cs" />
+    <Compile Include="Assets\Scripts\DemoScripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\ChangeMaterialFilterBased.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\ChangeMaterialSinusoidal.cs" />
     <Compile Include="Assets\Scripts\DemoScripts\DestroyItems.cs" />

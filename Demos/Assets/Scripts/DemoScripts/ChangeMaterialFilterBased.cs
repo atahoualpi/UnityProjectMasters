@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class ChangeMaterialFilterBased : MonoBehaviour {
 
-    private float changeTime = 3f;
+    private float changeTime = 0.5f;
     private GameObject currObj;
     private Hv_FilterBased_AudioLib HeavyScript;
     public float adder = 500f;
     private bool change = true;
+    public Renderer rend;
 
     // Use this for initialization
     void Start () {
-        currObj = GetComponent<SpawnItems>().Objects3D[0];
+        //currObj = GetComponent<SpawnItems>().Objects3D[0];
+        currObj = gameObject;
         HeavyScript = currObj.GetComponent<Hv_FilterBased_AudioLib>();
-        currObj.GetComponent<DestroyItems>().destroyTime = 6f;
-        GetComponent<SpawnItems>().spawnTime = 3f;
+        //currObj.GetComponent<DestroyItems>().destroyTime = 6f;
+        //GetComponent<SpawnItems>().spawnTime = 3f;
         StartCoroutine(ChngMat(changeTime)); // Or whatever delay we want.
     }
 	
@@ -41,10 +43,10 @@ public class ChangeMaterialFilterBased : MonoBehaviour {
     {
         adder += 200f;
         HeavyScript.SetFloatParameter(Hv_FilterBased_AudioLib.Parameter.Qfactor, adder);
-        if (adder >= 5000f)
-        {
-            change = false;
-            SpawnItems.keepSpawning = false;
-        }
+        //if (adder >= 5000f)
+        //{
+        //    change = false;
+        //    SpawnItems.keepSpawning = false;
+        //}
     }
 }

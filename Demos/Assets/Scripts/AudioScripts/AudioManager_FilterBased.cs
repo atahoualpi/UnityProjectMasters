@@ -60,7 +60,7 @@ public class AudioManager_FilterBased : MonoBehaviour
         //if (isSolid)
         //    rb.mass *= 10;
 
-        ScaleEverythingWithObject();
+        //ScaleEverythingWithObject();
 
         SetDataScript.IdentifyObject(this.transform, 1);
     }
