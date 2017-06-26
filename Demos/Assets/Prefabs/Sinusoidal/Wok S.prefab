@@ -280,8 +280,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1188830215969340}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.073, y: 1.513, z: 5.284}
+  m_LocalRotation: {x: 0.24317093, y: 0.5845983, z: 0.13482392, w: 0.7621911}
+  m_LocalPosition: {x: -4.0283628, y: 3.9416223, z: 1.3592857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4119758570438498}
@@ -291,7 +291,7 @@ Transform:
   - {fileID: 4044746537890192}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 12.301001, y: 78.29401, z: 30.089}
 --- !u!4 &4614731451735024
 Transform:
   m_ObjectHideFlags: 1
@@ -834,7 +834,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -846,7 +846,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -858,7 +858,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114718548288287792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -897,19 +897,19 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  multiplier: 0.5
+  multiplier: 1.084
 --- !u!114 &114804121586135030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1188830215969340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175ff3043338960418850fbdac84f911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 3
+  destroyTime: 20
 --- !u!114 &114879866959582546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -931,22 +931,22 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0
-  freq10: 0
-  freq2: 0
-  freq3: 0
-  freq4: 0
-  freq5: 0
-  freq6: 0
-  freq7: 0
-  freq8: 0
-  freq9: 0
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impact_force1: 0
   impact_force2: 0
   impact_force3: 0
   object_roughness: 5
-  qfactor: 4000
-  size: 0.5
+  qfactor: 3922
+  size: 1.084
   time_roll: 0
   time_scratch: 0
   velocity: 0

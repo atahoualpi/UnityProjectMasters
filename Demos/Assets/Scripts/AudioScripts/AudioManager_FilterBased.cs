@@ -89,6 +89,7 @@ public class AudioManager_FilterBased : MonoBehaviour
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Impactforce, collisionMagnitude + collisionMagnitude * ((otherObjectScript.qfactor / 5000 + HeavyScript.qfactor / 5000) / 2));
 
             HeavyScript.SendEvent(Hv_FilterRolling_AudioLib.Event.Whackimpact);
+            Debug.Log(collision.contacts[0].thisCollider.name);
         }
         else
         {
@@ -96,6 +97,7 @@ public class AudioManager_FilterBased : MonoBehaviour
 
             HeavyScript.SetFloatParameter(Hv_FilterRolling_AudioLib.Parameter.Impactforce, collisionMagnitude);
             HeavyScript.SendEvent(Hv_FilterRolling_AudioLib.Event.Whackimpact);
+            Debug.Log(collision.contacts[0].thisCollider.name);
         }
 
         //Debug.Log(collisionMagnitude);

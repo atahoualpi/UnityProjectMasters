@@ -104,7 +104,8 @@ public class AudioManager_Sinusoidal : MonoBehaviour
                         //Debug.Log("Impulse: " + collisionMagnitude);
                     }
                     HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack1);
-                    //Debug.Log("whack1");
+                    Debug.Log("whack1");
+                    Debug.Log(collision.contacts[0].thisCollider.name);
                     caseSwitch = 2;
                     break;
                 case 2:
@@ -117,7 +118,8 @@ public class AudioManager_Sinusoidal : MonoBehaviour
                         HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force2, collisionMagnitude);
                     }
                     HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack2);
-                    //Debug.Log("whack2");
+                    Debug.Log("whack2");
+                    Debug.Log(collision.contacts[0].thisCollider.name);
                     caseSwitch = 3;
                     break;
                 case 3:
@@ -130,7 +132,8 @@ public class AudioManager_Sinusoidal : MonoBehaviour
                         HeavyScript.SetFloatParameter(Hv_SinusRolling_AudioLib.Parameter.Impact_force3, collisionMagnitude);
                     }
                     HeavyScript.SendEvent(Hv_SinusRolling_AudioLib.Event.Whack3);
-                    //Debug.Log("whack3");
+                    Debug.Log("whack3");
+                    Debug.Log(collision.contacts[0].thisCollider.name);
                     caseSwitch = 1;
                     break;
             }

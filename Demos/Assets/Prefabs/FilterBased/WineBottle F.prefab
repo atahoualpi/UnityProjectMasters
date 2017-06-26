@@ -180,8 +180,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772368731452568}
-  m_LocalRotation: {x: 0.5519369, y: 0, z: 0, w: 0.83388585}
-  m_LocalPosition: {x: 1.18, y: 1.53, z: 5.16}
+  m_LocalRotation: {x: -0.54167527, y: 0.4545195, z: -0.54167527, w: 0.45451945}
+  m_LocalPosition: {x: -0.46, y: 2.67, z: 0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4292857679562634}
@@ -191,7 +191,7 @@ Transform:
   - {fileID: 4562903607985490}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 67, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -100}
 --- !u!4 &4912911626427716
 Transform:
   m_ObjectHideFlags: 1
@@ -414,7 +414,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &64059577750364418
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -500,7 +500,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
@@ -534,13 +534,13 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -552,7 +552,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -564,7 +564,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114109033228652218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,6 +578,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeavyScript: {fileID: 114600902973758978}
   freq_modes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  ampl_modes:
   - 0
   - 0
   - 0
@@ -625,18 +636,18 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0.5
-  freq10: 0.5
-  freq2: 0.5
-  freq3: 0.5
-  freq4: 0.5
-  freq5: 0.5
-  freq6: 0.5
-  freq7: 0.5
-  freq8: 0.5
-  freq9: 0.5
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impactForce: 0
-  object_roughness: 1
+  object_roughness: 0.3
   qfactor: 3500
   size: 1
   time_roll: 0
@@ -648,7 +659,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772368731452568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175ff3043338960418850fbdac84f911, type: 3}
   m_Name: 

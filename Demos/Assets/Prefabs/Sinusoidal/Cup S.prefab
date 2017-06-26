@@ -128,8 +128,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523685750638536}
-  m_LocalRotation: {x: 0, y: 0, z: 0.33380687, w: 0.94264156}
-  m_LocalPosition: {x: 1.073, y: 1.41, z: 5.284}
+  m_LocalRotation: {x: -0.103310384, y: 0.35638425, z: 0.18465354, w: 0.9100661}
+  m_LocalPosition: {x: -4.06, y: 3.8, z: 1.337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4445380205020294}
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 4782597829742182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39}
+  m_LocalEulerAnglesHint: {x: -7.1040006, y: 37.969, z: 25.641}
 --- !u!4 &4168551487402460
 Transform:
   m_ObjectHideFlags: 1
@@ -414,7 +414,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &64654589266379154
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -540,7 +540,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -552,7 +552,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -564,7 +564,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114422870679244242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,16 +610,16 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0.5
-  freq10: 0.5
-  freq2: 0.5
-  freq3: 0.5
-  freq4: 0.5
-  freq5: 0.5
-  freq6: 0.5
-  freq7: 0.5
-  freq8: 0.5
-  freq9: 0.5
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impact_force1: 0
   impact_force2: 0
   impact_force3: 0
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523685750638536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175ff3043338960418850fbdac84f911, type: 3}
   m_Name: 

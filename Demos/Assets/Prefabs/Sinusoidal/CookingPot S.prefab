@@ -166,8 +166,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939720904862970}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2164396, w: 0.97629607}
-  m_LocalPosition: {x: 1.249, y: 1.548, z: 5.089}
+  m_LocalRotation: {x: 0, y: -0, z: 0.9961947, w: -0.08715578}
+  m_LocalPosition: {x: 0, y: 0.16, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4395340318909500}
@@ -177,7 +177,7 @@ Transform:
   - {fileID: 4343182136602728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 190}
 --- !u!4 &4828546722322654
 Transform:
   m_ObjectHideFlags: 1
@@ -413,7 +413,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &64167428927192300
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -537,7 +537,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -588,19 +588,19 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  multiplier: 0.6
+  multiplier: 1
 --- !u!114 &114421592996464066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939720904862970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175ff3043338960418850fbdac84f911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 3
+  destroyTime: 20
 --- !u!114 &114800240547045552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -637,7 +637,7 @@ MonoBehaviour:
   impact_force3: 0
   object_roughness: 10
   qfactor: 4000
-  size: 0.6
+  size: 1
   time_roll: 0
   time_scratch: 0
   velocity: 0

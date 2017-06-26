@@ -74,15 +74,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929629616160766}
-  m_LocalRotation: {x: -0.046246946, y: 0.7055928, z: -0.046246946, w: 0.7055928}
-  m_LocalPosition: {x: 1.073, y: 1.513, z: 5.284}
+  m_LocalRotation: {x: 0.6534323, y: -0.62358236, z: 0.42857152, w: -0.0223122}
+  m_LocalPosition: {x: -4.1, y: 4, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4989129261896302}
   - {fileID: 4974102568402952}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -7.5}
+  m_LocalEulerAnglesHint: {x: 30.354002, y: -222.946, z: -104.85901}
 --- !u!4 &4974102568402952
 Transform:
   m_ObjectHideFlags: 1
@@ -285,7 +285,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -297,7 +297,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -309,7 +309,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114037799180978360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,6 +323,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeavyScript: {fileID: 114368225672394428}
   freq_modes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  ampl_modes:
   - 0
   - 0
   - 0
@@ -355,19 +366,19 @@ MonoBehaviour:
   amp7: 0.5
   amp8: 0.5
   amp9: 0.5
-  freq1: 0.5
-  freq10: 0.5
-  freq2: 0.5
-  freq3: 0.5
-  freq4: 0.5
-  freq5: 0.5
-  freq6: 0.5
-  freq7: 0.5
-  freq8: 0.5
-  freq9: 0.5
+  freq1: 20
+  freq10: 20
+  freq2: 20
+  freq3: 20
+  freq4: 20
+  freq5: 20
+  freq6: 20
+  freq7: 20
+  freq8: 20
+  freq9: 20
   impactForce: 0
-  object_roughness: 5
-  qfactor: 1500
+  object_roughness: 13.8
+  qfactor: 2116
   size: 1
   time_roll: 0
   time_scratch: 0
@@ -393,7 +404,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929629616160766}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175ff3043338960418850fbdac84f911, type: 3}
   m_Name: 
